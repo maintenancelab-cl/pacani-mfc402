@@ -1,0 +1,72 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guía PACANI U3</title><style>body{font:17px Arial;max-width:980px;margin:40px auto;padding:20px;color:#263c43}pre{white-space:pre-wrap;font:inherit;line-height:1.6}a{color:#18636c}</style><a href="index.html">Volver al comparador</a><pre># PACANI U3 · Tres propuestas de simultaneidad
+
+Preparación del 12 de noviembre de 2026. Inicio SIMULADO: lunes 16/11/2026 a las 08:00. No es una fecha indicada por el docente.
+
+## Condiciones comunes
+
+- 30 actividades originales y 177 horas de duración sumada. Un hito adicional de cero horas representa el cierre. No se han reducido duraciones para acelerar.
+- Lunes a viernes 08:00–12:00 y 13:00–17:00, sin horas extra. Prevencionista 08:00–12:00, 20 horas semanales. Las franjas son propuestas.
+- El 8 de diciembre de 2026 se excluye como no laborable en ambos calendarios. Fuente: calendario de feriados del Gobierno de Chile. No se supone autorización para trabajar en feriado.
+- Los 26 días se interpretan como corridos solo para esta simulación. Referencia de llegada: 12/12/2026 08:00. Debe confirmarse el significado del plazo y el calendario real, incluidos feriados.
+- Mecánico y ayudante se asignan siempre juntos. Recursos S y P significan supervisor y prevencionista. 1 a 4 identifican duplas M1/A1 a M4/A4, no trabajadores nuevos.
+- Asignaciones y competencias son propuestas. Las capacitaciones reservan una dupla representante, NO toda la dotación. Si deben asistir todos, rehacer las reservas y recalcular. El supervisor tiene tareas específicas, pero su supervisión general no se cuantifica como una actividad continua.
+- La inspección de emergencia se conserva como verificación preventiva programada, sin inventar que ocurrió una emergencia. Confirmar su alcance.
+- Se asume disponibilidad de materiales y repuestos al inicio de cada actividad; no se inventan compras ni tiempos de entrega. La actividad 30 permanece por exigencia de la pauta, pero solo tiene duración y asignación: no se calculan costos.
+- No se ha guardado línea base, ejecutado tareas ni aplicado los datos históricos como avances actuales. Falta el Anexo B para el seguimiento actual.
+
+## Las propuestas
+
+### S1 · Apoyo en paralelo
+
+Mantener secuenciales los trabajos sobre el equipo y adelantar planificación, inventario y procedimientos. Es la propuesta más conservadora.
+
+Condición: Los trabajos de apoyo no ocupan el área intervenida y pueden realizarse con la información disponible.
+
+Término calculado: 2026-12-11 09:00:00. Transcurren 25.04 días corridos y quedan 0.96 días hasta la referencia de llegada. Archivo: PACANI-U3-S1.xml.
+
+### S2 · Optimización anticipada
+
+Preparar la optimización de procesos mientras la dupla principal repara y ensambla. Implementar después de ambas ramas y antes de las pruebas.
+
+Condición: La tarea 16 se interpreta como análisis y preparación fuera del equipo; debe confirmarse que no exige operación o resultados de pruebas finales.
+
+Término calculado: 2026-12-10 10:00:00. Transcurren 24.08 días corridos y quedan 1.92 días hasta la referencia de llegada. Archivo: PACANI-U3-S2.xml.
+
+### S3 · Software y preparación independientes
+
+Añadir la actualización de software fuera del equipo a la preparación anticipada, con una dupla distinta. Reunir las ramas antes de implementar mejoras, calibrar y probar.
+
+Condición: La actualización se ejecuta en un controlador o entorno aislado compatible. Si requiere el mismo equipo o energizarlo durante reparación, este escenario no es admisible.
+
+Término calculado: 2026-12-09 10:00:00. Transcurren 23.08 días corridos y quedan 2.92 días hasta la referencia de llegada. Archivo: PACANI-U3-S3.xml.
+
+## Cómo elegir
+
+S1 sirve como referencia conservadora. S2 permite discutir una simultaneidad centrada en análisis fuera del equipo. S3 solo es defendible si el software se actualiza realmente en un entorno independiente. La propuesta más corta no es automáticamente la mejor. Elegir un escenario exige aceptar sus condiciones; ninguno se marca como aprobado.
+
+## Abrir y guardar en Project
+
+1. En Project de escritorio, Archivo → Abrir → Examinar. Seleccionar el XML y abrirlo como proyecto nuevo, sin combinar con otro programa.
+2. Comprobar 30 tareas originales más un hito; duración total sumada de las tareas originales 177 h. No confundir esa suma con la duración calendario ni con horas-persona.
+3. Confirmar programación automática, tareas de duración fija y esfuerzo no condicionado. Las fechas del XML son resultados de simulación; las relaciones son fin a comienzo, sin restricciones de fecha forzada.
+4. Verificar los dos calendarios y la disponibilidad del prevencionista. Las tareas que lo requieren usan calendario de cuatro horas diarias para conservar sus horas efectivas.
+5. Revisar Uso de recursos. Los enlaces de exclusividad evitan que una misma persona figure en dos tareas simultáneas. Están separados en el CSV de las precedencias técnicas; no confundir una espera por recurso con una necesidad técnica.
+6. Recalcular y comparar las fechas de las 30 tareas con el CSV del escenario. Si difieren, revisar calendario, tipo de tarea, recursos y opciones de importación antes de aprobar. La validación XML no sustituye esta prueba.
+7. Cambiar la fecha simulada por la que acuerde el docente y ajustar feriados. Revisar la llegada de fruta: el hito contiene una fecha límite simulada que NO se mueve automáticamente al cambiar el inicio.
+8. Guardar como PACANI-U3-S1.mpp, S2.mpp o S3.mpp. Solo después de elegir y validar una propuesta, guardar la línea base y conservar una copia. No sobrescribirla al recibir el Anexo B.
+
+## Validaciones realizadas y límites
+
+Se validó la estructura de los tres XML con el esquema oficial de Microsoft, adaptando únicamente el namespace de una copia para comprobarlo contra el XSD 2007 publicado. Los archivos usan el namespace MSPDI documentado en los ejemplos de Project. Se comprobaron ausencia de ciclos, precedencias, duraciones, ocupación horaria, parejas, máximos semanales y coherencia de los enlaces de recurso con las fechas simuladas. No hay Project instalado en este PC: no se ha validado la apertura ni el recálculo nativo y no se entrega un .mpp ficticio.
+
+El margen indicado es diferencia calendario frente a la llegada simulada. No equivale a holgura CPM de cada tarea. La ruta crítica y las holguras finales deben comprobarse en Project con los calendarios confirmados.
+
+## Fuentes
+
+MFC402_U3_TP1, IT1 y Anexo A complementario conservados en la carpeta U3-PACANI-2026-11-09/Fuentes. Las redes y asignaciones de este paquete son propuestas del análisis, no datos originales.
+
+Microsoft, esquema de intercambio: https://schemas.microsoft.com/project/2007/mspdi_pj12.xsd
+Microsoft, importación: https://support.microsoft.com/en-gb/project/export-or-import-data-to-another-file-format
+Microsoft, precedencias: https://learn.microsoft.com/en-us/office-project/xml-data-interchange/predecessorlink-element
+Gobierno de Chile, feriados 2026: https://www.gob.cl/noticias/feriados-2026-revisa-cuantos-habra-y-cuales-son-irrenunciables/
+</pre></html>
